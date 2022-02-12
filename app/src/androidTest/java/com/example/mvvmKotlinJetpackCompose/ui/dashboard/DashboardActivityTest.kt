@@ -2,11 +2,8 @@ package com.example.mvvmKotlinJetpackCompose.ui.dashboard
 
 import androidx.activity.ComponentActivity
 import androidx.compose.foundation.ExperimentalFoundationApi
-import androidx.compose.ui.test.assertIsDisplayed
+import androidx.compose.ui.test.*
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
-import androidx.compose.ui.test.onNodeWithTag
-import androidx.compose.ui.test.onNodeWithText
-import androidx.compose.ui.test.performClick
 import com.example.mvvmKotlinJetpackCompose.R
 import com.example.mvvmKotlinJetpackCompose.ui.BaseInstrument
 import com.example.mvvmKotlinJetpackCompose.ui.login.LoginActivity
@@ -28,5 +25,14 @@ class DashboardActivityTest :BaseInstrument(){
         activity=composeTestRule.activity
     }
 
+
+    @Test
+    fun click_On_Icon_And_Show_A_Dialog(){
+        composeTestRule
+            .onNodeWithTag(activity.getString(R.string.jet_pck_icon))
+            .performClick()
+            .assertIsDisplayed()
+
+    }
 
 }

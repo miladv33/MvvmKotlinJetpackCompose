@@ -31,8 +31,14 @@ fun DashboardContent(menuItems: List<MenuItem>, openActivity: (String) -> Unit={
             .height(dimensionResource(R.dimen.dp_80)))
         Image(painter = painterResource(R.drawable.jetpack_logo),
             modifier = Modifier
+                .testTag(stringResource(R.string.jet_pck_icon))
                 .width(dimensionResource(id = R.dimen.dp_145))
-                .height(dimensionResource(id = R.dimen.dp_145)),
+                .height(dimensionResource(id = R.dimen.dp_145))
+                .clickable(onClick = {
+                            
+                })
+
+                ,
             contentDescription = "")
 
         Spacer(modifier = Modifier
