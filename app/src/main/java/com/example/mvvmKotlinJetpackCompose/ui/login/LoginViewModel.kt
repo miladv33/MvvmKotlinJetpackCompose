@@ -1,5 +1,7 @@
 package com.example.mvvmKotlinJetpackCompose.ui.login
 
+import android.util.Log
+import android.widget.Toast
 import androidx.annotation.VisibleForTesting
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -54,6 +56,7 @@ class LoginViewModel @Inject constructor(
 
                             if (loginResult.data != null) {
                                 loginResponsePrivate.value = loginResult
+                                showWelcome()
                             } else {
                                 showMessageDialog(loginResult as DataError<String>)
                             }
@@ -68,7 +71,6 @@ class LoginViewModel @Inject constructor(
         }
 
     }
-
 
 
 

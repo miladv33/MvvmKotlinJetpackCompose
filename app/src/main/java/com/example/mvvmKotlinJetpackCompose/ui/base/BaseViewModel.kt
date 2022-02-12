@@ -1,5 +1,6 @@
 package com.example.mvvmKotlinJetpackCompose.ui.base
 
+import android.util.Log
 import androidx.annotation.VisibleForTesting
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -70,6 +71,9 @@ open class BaseViewModel<R : BaseRepository>(
 
     }
 
+    fun showWelcome() {
+        Log.i("welcome", "showWelcome: welcome in viewModel")
+    }
 
 
 }

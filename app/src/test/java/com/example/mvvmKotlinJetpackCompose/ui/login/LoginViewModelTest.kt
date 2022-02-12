@@ -95,6 +95,7 @@ class LoginViewModelTest : BaseTest<LoginViewModel, RegistrationRepo>() {
             repository.login(any(),any())
             viewModelUnderTest.showLoading()
             viewModelUnderTest.hideLoading()
+            viewModelUnderTest.showWelcome()
         }
 
     }
