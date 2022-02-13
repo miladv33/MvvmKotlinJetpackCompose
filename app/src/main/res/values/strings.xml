@@ -46,5 +46,6 @@
     <string name="drawer_test_tag">drawer_test_tag</string>
     <string name="dashboard_content_tag">dashboard_content_tag</string>
     <string name="jet_pck_icon">JetPackIcon</string>
+    <string name="changed_text_test">changedText</string>
 
 </resources>
