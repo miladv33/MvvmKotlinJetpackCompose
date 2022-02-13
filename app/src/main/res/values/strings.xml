@@ -47,5 +47,9 @@
     <string name="dashboard_content_tag">dashboard_content_tag</string>
     <string name="jet_pck_icon">JetPackIcon</string>
     <string name="changed_text_test">changedText</string>
+    <string name="email_icon">emailIcon</string>
+    <string name="this_is_email_icon">This is Email icon</string>
+    <string name="this_is_password_icon">this is password icon</string>
+    <string name="password_icon">passwordIcon</string>
 
 </resources>

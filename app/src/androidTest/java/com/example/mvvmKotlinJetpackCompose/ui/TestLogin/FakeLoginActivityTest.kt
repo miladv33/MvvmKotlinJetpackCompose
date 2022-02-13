@@ -25,12 +25,32 @@ class FakeLoginActivityTest : BaseInstrument() {
 
     @Test
     fun change_text_when_click_on_image() {
-        val onNodeWithTag = composeTestRule
+        composeTestRule
             .onNodeWithTag(activity.getString(R.string.jet_pck_icon))
             .performClick()
 
         composeTestRule
             .onNodeWithTag(activity.getString(R.string.login_title))
             .assertTextContains(activity.getString(R.string.changed_text_test))
+    }
+
+    @Test
+    fun when_click_on_email_icon_change_text_to_say_this_is_email() {
+        composeTestRule
+            .onNodeWithTag(activity.getString((R.string.email_icon)))
+            .performClick()
+        composeTestRule
+            .onNodeWithTag(activity.getString(R.string.login_title))
+            .assertTextContains(activity.getString(R.string.this_is_email_icon))
+    }
+
+    @Test
+    fun when_click_on_password_icon_change_text_to_say_this_is_password() {
+        composeTestRule
+            .onNodeWithTag(activity.getString((R.string.password_icon)))
+            .performClick()
+        composeTestRule
+            .onNodeWithTag(activity.getString(R.string.login_title))
+            .assertTextContains(activity.getString(R.string.this_is_password_icon))
     }
 }

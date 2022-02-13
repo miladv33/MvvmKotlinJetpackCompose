@@ -142,7 +142,14 @@ class FakeLoginActivity : BaseComponentActivity<LoginViewModel>() {
             leadingIcon = {
                 Icon(
                     painter = painterResource(R.drawable.ic_baseline_lock_24),
-                    contentDescription = "", tint = MaterialTheme.colors.onSecondary
+                    contentDescription = "", tint = MaterialTheme.colors.onSecondary,
+                    modifier = Modifier.testTag(getString((R.string.password_icon)))
+                        .clickable(onClick = {
+                            lifecycleScope.launch {
+                                text.emit(getString(R.string.this_is_password_icon))
+                            }
+                        })
+
                 )
             })
 
@@ -226,7 +233,15 @@ class FakeLoginActivity : BaseComponentActivity<LoginViewModel>() {
             leadingIcon = {
                 Icon(
                     painter = painterResource(R.drawable.ic_baseline_person_24),
-                    contentDescription = "", tint = MaterialTheme.colors.onSecondary
+                    contentDescription = "", tint = MaterialTheme.colors.onSecondary,
+                    modifier = Modifier
+                        .testTag(getString(R.string.email_icon))
+                        .clickable(
+                        onClick = {
+                            lifecycleScope.launch {
+                                text.emit(getString( R.string.this_is_email_icon))
+                            }
+                        })
                 )
             })
         Spacer(
