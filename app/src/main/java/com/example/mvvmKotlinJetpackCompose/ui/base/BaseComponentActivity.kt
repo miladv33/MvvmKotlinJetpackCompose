@@ -16,6 +16,7 @@ import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -93,6 +94,7 @@ abstract class BaseComponentActivity<VM : BaseViewModel<*>> : ComponentActivity(
             Box(
                 contentAlignment = Alignment.Center,
                 modifier = Modifier
+                    .testTag(getString(R.string.baseLoadingIcon))
                     .size(100.dp)
                     .background(White, shape = RoundedCornerShape(8.dp))
             ) {

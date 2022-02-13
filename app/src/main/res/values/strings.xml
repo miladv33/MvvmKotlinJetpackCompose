@@ -51,5 +51,9 @@
     <string name="this_is_email_icon">This is Email icon</string>
     <string name="this_is_password_icon">this is password icon</string>
     <string name="password_icon">passwordIcon</string>
+    <string name="baseLoadingIcon">baseLoadingIcon</string>
+    <string name="check_name_button">checkNameButton</string>
+    <string name="name_edit_box">nameEditBox</string>
+    <string name="current_name">current name</string>
 
 </resources>

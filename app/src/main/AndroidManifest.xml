@@ -37,6 +37,11 @@
             android:exported="true"
             android:theme="@style/Theme.MvvmKotlinJetpackCompose.NoActionBar"
             >
+
+        </activity>
+
+        <activity android:name=".ui.TestLogin.MainTestActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
