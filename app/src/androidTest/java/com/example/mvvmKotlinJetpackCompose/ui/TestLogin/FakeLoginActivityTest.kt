@@ -26,31 +26,31 @@ class FakeLoginActivityTest : BaseInstrument() {
     @Test
     fun change_text_when_click_on_image() {
         composeTestRule
-            .onNodeWithTag(activity.getString(R.string.jet_pck_icon))
+            .onNodeWithTag("JetPackIcon")
             .performClick()
 
         composeTestRule
-            .onNodeWithTag(activity.getString(R.string.login_title))
-            .assertTextContains(activity.getString(R.string.changed_text_test))
+            .onNodeWithTag("A demo App using kotlin, Mvvm, jetpack Compose, Unit testing.")
+            .assertTextContains("changedText")
     }
 
     @Test
     fun when_click_on_email_icon_change_text_to_say_this_is_email() {
         composeTestRule
-            .onNodeWithTag(activity.getString((R.string.email_icon)))
+            .onNodeWithTag("emailIcon")
             .performClick()
         composeTestRule
-            .onNodeWithTag(activity.getString(R.string.login_title))
-            .assertTextContains(activity.getString(R.string.this_is_email_icon))
+            .onNodeWithTag("A demo App using kotlin, Mvvm, jetpack Compose, Unit testing.")
+            .assertTextContains("This is Email icon")
     }
 
     @Test
     fun when_click_on_password_icon_change_text_to_say_this_is_password() {
         composeTestRule
-            .onNodeWithTag(activity.getString((R.string.password_icon)))
+            .onNodeWithTag("passwordIcon")
             .performClick()
         composeTestRule
-            .onNodeWithTag(activity.getString(R.string.login_title))
-            .assertTextContains(activity.getString(R.string.this_is_password_icon))
+            .onNodeWithTag("A demo App using kotlin, Mvvm, jetpack Compose, Unit testing.")
+            .assertTextContains("This is Email icon")
     }
 }

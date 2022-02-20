@@ -15,13 +15,19 @@ android {
         versionCode 1
         versionName "1.0"
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+//        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
             useSupportLibrary true
         }
+        testApplicationId "com.example.mvvmKotlinJetpackCompose"
+        android.defaultConfig.testInstrumentationRunner "io.cucumber.android.runner.CucumberAndroidJUnitRunner"
+
     }
 
     buildTypes {
+        debug {
+            buildConfigField 'String', 'TEST_TAGS', '"' + getTestTags() + '"'
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
@@ -47,7 +53,9 @@ android {
             excludes += '/META-INF/{AL2.0,LGPL2.1}'
         }
     }
-
+    buildFeatures {
+        viewBinding true
+    }
 }
 
 dependencies {
@@ -97,4 +105,13 @@ dependencies {
     androidTestImplementation "androidx.compose.ui:ui-test-junit4:1.0.5"
     androidTestImplementation "com.google.dagger:hilt-android-testing:$hilt_version"
     kaptAndroidTest "com.google.dagger:hilt-android-compiler:$hilt_version"
+
+
+    androidTestImplementation "io.cucumber:cucumber-android:4.9.0"
+    androidTestImplementation 'androidx.test:rules:1.4.0'
+    androidTestImplementation 'androidx.test:runner:1.4.0'
+}
+
+def getTestTags() {
+    project.getProperties().get('tags') ?: ''
 }

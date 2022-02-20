@@ -23,64 +23,66 @@ class LoginActivityTest : BaseInstrument(){
 
     @Before
    override fun setUp() {
-        activity = composeTestRule.activity
-        composeTestRule
-            .onNodeWithTag(activity.getString(R.string.email_address))
-            .performTextClearance()
-        composeTestRule
-            .onNodeWithTag(activity.getString(R.string.password))
-            .performTextClearance()
-    }
-
-    @Test
-    fun login_emptyEmail_showMessage() {
-        composeTestRule
-            .onNodeWithTag(activity.getString(R.string.password))
-            .performTextInput("12323")
-
-        composeTestRule.onNodeWithTag(activity.getString(R.string.sign_in))
-            .performClick()
-
-        composeTestRule.onNodeWithText(ENTER_EMAIL_ID)
-            .assertIsDisplayed()
-
 
     }
-
-
-    @Test
-    fun login_emptyPass_showMessage() {
-        composeTestRule
-            .onNodeWithTag(activity.getString(R.string.email_address))
-            .performTextInput("12323")
-
-        composeTestRule.onNodeWithTag(activity.getString(R.string.sign_in))
-            .performClick()
-
-        composeTestRule.onNodeWithText(ENTER_PASSWORD)
-            .assertIsDisplayed()
-
-
-    }
-
-    @Test
-    fun login_filledEmailAndPass_openDashboard() {
-        composeTestRule
-            .onNodeWithTag(activity.getString(R.string.email_address))
-            .performTextInput("suorizwansayyed786@gmail.com")
-
-        composeTestRule
-            .onNodeWithTag(activity.getString(R.string.password))
-            .performTextInput("SuoRizwan")
-
-        composeTestRule.onNodeWithTag(activity.getString(R.string.sign_in))
-            .performClick()
-
-        composeTestRule.
-                onNodeWithTag(activity.getString(R.string.dashboard_content_tag))
-            .assertIsDisplayed()
-
-    }
+//        activity = composeTestRule.activity
+//        composeTestRule
+//            .onNodeWithTag(activity.getString(R.string.email_address))
+//            .performTextClearance()
+//        composeTestRule
+//            .onNodeWithTag(activity.getString(R.string.password))
+//            .performTextClearance()
+//    }
+//
+//    @Test
+//    fun login_emptyEmail_showMessage() {
+//        composeTestRule
+//            .onNodeWithTag(activity.getString(R.string.password))
+//            .performTextInput("12323")
+//
+//        composeTestRule.onNodeWithTag(activity.getString(R.string.sign_in))
+//            .performClick()
+//
+//        composeTestRule.onNodeWithText(ENTER_EMAIL_ID)
+//            .assertIsDisplayed()
+//
+//
+//    }
+//
+//
+//    @Test
+//    fun login_emptyPass_showMessage() {
+//        composeTestRule
+//            .onNodeWithTag(activity.getString(R.string.email_address))
+//            .performTextInput("12323")
+//
+//        composeTestRule.onNodeWithTag(activity.getString(R.string.sign_in))
+//            .performClick()
+//
+//        composeTestRule.onNodeWithText(ENTER_PASSWORD)
+//            .assertIsDisplayed()
+//
+//
+//    }
+//
+//    @Test
+//    fun login_filledEmailAndPass_openDashboard() {
+//        composeTestRule
+//            .onNodeWithTag(activity.getString(R.string.email_address))
+//            .performTextInput("suorizwansayyed786@gmail.com")
+//
+//        composeTestRule
+//            .onNodeWithTag(activity.getString(R.string.password))
+//            .performTextInput("SuoRizwan")
+//
+//        composeTestRule.onNodeWithTag(activity.getString(R.string.sign_in))
+//            .performClick()
+//
+//        composeTestRule.
+//                onNodeWithTag(activity.getString(R.string.dashboard_content_tag))
+//            .assertIsDisplayed()
+//
+//    }
 
 
 

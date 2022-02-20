@@ -26,13 +26,13 @@ class DashboardActivityTest :BaseInstrument(){
     }
 
 
-    @Test
-    fun click_On_Icon_And_Show_A_Dialog(){
-        composeTestRule
-            .onNodeWithTag(activity.getString(R.string.jet_pck_icon))
-            .performClick()
-            .assertIsDisplayed()
-
-    }
+//    @Test
+//    fun click_On_Icon_And_Show_A_Dialog(){
+//        composeTestRule
+//            .onNodeWithTag(activity.getString(R.string.jet_pck_icon))
+//            .performClick()
+//            .assertIsDisplayed()
+//
+//    }
 
 }
